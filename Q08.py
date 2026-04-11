@@ -1,9 +1,17 @@
-# Q08. Sum of Digits (while loop)
-#
-# Ask the user for a positive integer.
-# Print the sum of its digits using a while loop.
-#
-# Sample Input:   Enter a number: 9876
-# Sample Output:  Sum of digits of 9876 = 30
+# Ask the user for a positive integer
+num_input = input("Enter a number: ")
+original_num = int(num_input)
+number = original_num
+digit_sum = 0
 
-# --- YOUR CODE HERE ---
+# Use a while loop to process each digit
+while number > 0:
+    # Get the last digit using modulo 10
+    digit = number % 10
+    # Add digit to the sum
+    digit_sum += digit
+    # Remove the last digit using floor division
+    number = number // 10
+
+# Print the result matching the sample output format
+print(f"Sum of digits of {original_num} = {digit_sum}")
